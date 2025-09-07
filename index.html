@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=1200, initial-scale=1"/>
+  <title>Remaja Islam – MJII</title>
+  <meta name="description" content="Website RISMI yang berisi tentang anggota, dan program kerja"/>
+  <link rel="stylesheet" href="./css/styles.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner container">
+      <div class="logo">
+        <img src="./assets/logoo.png" alt="RISMI"/>
+        <span class="brand">RISMI</span>
+      </div>
+      <div class="tabs">
+        <button class="tab" data-route="Beranda" onclick="setRoute('Beranda')">Beranda</button>
+        <button class="tab" data-route="Susunan anggota" onclick="setRoute('Susunan anggota')">Susunan anggota</button>
+        <button class="tab" data-route="Program yang sedang berjalan" onclick="setRoute('Program yang sedang berjalan')">program yang sedang berjalan</button>
+        <button class="tab" data-route="Program akan datang" onclick="setRoute('Program akan datang')">Program akan datang</button>
+        <button class="tab" data-route="Berita" onclick="setRoute('Berita')">Berita</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" id="app"></main>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <footer class="container footer">
+    <div>© 2025-2030 RISMI.</div>
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
