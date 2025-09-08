@@ -50,17 +50,17 @@ function render() {
         <p>Kami hadir untuk masjid dan untuk masyarakat sekitar masjid jami ittihaadul ikhwan, dan kami memiliki visi dan misi diantaranya :</p>
         
        </p> Visi</p> 
-    </p>1. Mewujudkan generasi remaja masjid yang berakhlak mulia, berilmu, aktif dan berkontribusi dalam membangun peradaban Islam di lingkungan masyarakat
-        2. Membangun kesadaran beragama melalui huruf dasar hijaiyah
-        3. Membangun generasi muda yang unggul melalui ajaran ilmu agama serta aktif dalam memakmuran masjid
-        4. Menjadi wadah pembinaan remaja masjid yang membentuk generasi muda Islam yang beriman, berakhlak mulia, cinta Al-Qur’an, cinta masjid, peduli terhadap umat, serta mampu berkontribusi positif bagi agama, bangsa, dan masyarakat.</p>
+    </p>1. Mewujudkan generasi remaja masjid yang berakhlak mulia, berilmu, aktif dan berkontribusi dalam membangun peradaban Islam di lingkungan masyarakat</p>
+    </p>2. Membangun kesadaran beragama melalui huruf dasar hijaiyah</p>
+    </p>3. Membangun generasi muda yang unggul melalui ajaran ilmu agama serta aktif dalam memakmuran masjid</p>
+    </p>4. Menjadi wadah pembinaan remaja masjid yang membentuk generasi muda Islam yang beriman, berakhlak mulia, cinta Al-Qur’an, cinta masjid, peduli terhadap umat, serta mampu berkontribusi positif bagi agama, bangsa, dan masyarakat.</p>
         
         </p>Misi</p>
-        </p>1. Mendorong pengembangan potensi diri remaja dalam bidang keagamaan, seni, olahraga, dan kepemimpinan
-        2. Meningkatkan keimanan dan ketaqwaan remaja melalui kegiatan keagamaan yang rutin dan kreatif 
-        3. Menyediakan wadah untuk anak muda terutama remaja untuk belajar ilmu agama
-        4. Menyediakan wadah untuk anak muda terutama remaja untuk meningkatkan keahliannya
-        5. Mengikut sertakan masyarakat sekitar dalam program dan kegiatan yang dijalankan</p>
+        </p>1. Mendorong pengembangan potensi diri remaja dalam bidang keagamaan, seni, olahraga, dan kepemimpinan</p>
+        </p>2. Meningkatkan keimanan dan ketaqwaan remaja melalui kegiatan keagamaan yang rutin dan kreatif</p> 
+        </p>3. Menyediakan wadah untuk anak muda terutama remaja untuk belajar ilmu agama</p>
+        </p>4. Menyediakan wadah untuk anak muda terutama remaja untuk meningkatkan keahliannya</p>
+        </p>5. Mengikut sertakan masyarakat sekitar dalam program dan kegiatan yang dijalankan</p>
       </div>
     `;
   }
