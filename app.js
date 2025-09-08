@@ -47,16 +47,16 @@ function render() {
     app.innerHTML = `
       <div class="card">
         <h2>Selamat Datang</h2>
-        <p>Kami hadir untuk masjid dan untuk masyarakat sekitar masjid jami ittihaadul ikhwan, dan kami memiliki visi dan misi diantaranya :
+        <p>Kami hadir untuk masjid dan untuk masyarakat sekitar masjid jami ittihaadul ikhwan, dan kami memiliki visi dan misi diantaranya :</p>
         
-        Visi 
-        1. Mewujudkan generasi remaja masjid yang berakhlak mulia, berilmu, aktif dan berkontribusi dalam membangun peradaban Islam di lingkungan masyarakat
+       </p> Visi</p> 
+    </p>1. Mewujudkan generasi remaja masjid yang berakhlak mulia, berilmu, aktif dan berkontribusi dalam membangun peradaban Islam di lingkungan masyarakat
         2. Membangun kesadaran beragama melalui huruf dasar hijaiyah
         3. Membangun generasi muda yang unggul melalui ajaran ilmu agama serta aktif dalam memakmuran masjid
-        4. Menjadi wadah pembinaan remaja masjid yang membentuk generasi muda Islam yang beriman, berakhlak mulia, cinta Al-Qur’an, cinta masjid, peduli terhadap umat, serta mampu berkontribusi positif bagi agama, bangsa, dan masyarakat.
+        4. Menjadi wadah pembinaan remaja masjid yang membentuk generasi muda Islam yang beriman, berakhlak mulia, cinta Al-Qur’an, cinta masjid, peduli terhadap umat, serta mampu berkontribusi positif bagi agama, bangsa, dan masyarakat.</p>
         
-        Misi
-        1. Mendorong pengembangan potensi diri remaja dalam bidang keagamaan, seni, olahraga, dan kepemimpinan
+        </p>Misi</p>
+        </p>1. Mendorong pengembangan potensi diri remaja dalam bidang keagamaan, seni, olahraga, dan kepemimpinan
         2. Meningkatkan keimanan dan ketaqwaan remaja melalui kegiatan keagamaan yang rutin dan kreatif 
         3. Menyediakan wadah untuk anak muda terutama remaja untuk belajar ilmu agama
         4. Menyediakan wadah untuk anak muda terutama remaja untuk meningkatkan keahliannya
