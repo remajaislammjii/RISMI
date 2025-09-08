@@ -18,7 +18,7 @@ const state = {
     { nama: 'Aulia', jabatan: 'Media 3' },
     { nama: 'Saqib', jabatan: 'Pendidikan dan dakwah + Teknisi' },
     { nama: 'Esta', jabatan: 'Perlengkapan' },
-    { nama: 'Naswa', jabatan: 'Perlengkapan' },
+    { nama: 'Laila', jabatan: 'Perlengkapan' },
     { nama: 'Adnin', jabatan: 'Perlengkapan' }
   ],
   fixtures: [
