@@ -10,22 +10,22 @@ const state = {
     { nama: 'Lita', jabatan: 'Seketaris 2' },
     { nama: 'Rehan', jabatan: 'Humas 1' },
     { nama: 'Sobri', jabatan: 'Humas 2' },
-    { nama: 'Ferdi', jabatan: 'Bidang olahraga 1 + Teknisi' },
-    { nama: 'Fahri', jabatan: 'Bidang olahraga 2' },
+    { nama: 'Ferdi', jabatan: 'Bidang olahraga 1' },
+    { nama: 'Fahri', jabatan: 'Bidang olahraga 2 + Teknisi' },
     { nama: 'Hasbi', jabatan: 'Media 1' },
     { nama: 'Alif', jabatan: 'Media 2' },
     { nama: 'Aulia', jabatan: 'Media 3' },
     { nama: 'Saqib', jabatan: 'Pendidikan dan dakwah + Teknisi' },
     { nama: 'Esta', jabatan: 'Perlengkapan' },
     { nama: 'Laila', jabatan: 'Perlengkapan' },
-    { nama: 'Adnin', jabatan: 'Perlengkapan' },
+    { nama: 'Adnin', jabatan: 'Perlengkapan' }
   ],
   fixtures: [ // Program sedang berjalan
     { nama: '-', tanggal: '-' },
   ],
   transfers: [ // Program akan datang
     { nama: 'Maulid & Sholat Shubuh Gabungan', tanggal: '28 September 2025' },
-    { nama: 'Isra Mi\'raj', tanggal: 'Belum ada' }
+    { nama: 'Isra Mi\'raj', tanggal: '-' }
   ],
   news: [
     { judul: '-'}
@@ -45,8 +45,8 @@ function render() {
   if (state.route === "Beranda") {
     app.innerHTML = `
       <div class="card">
-        <h2>Selamat Datang</h2>
-        <p>Kami hadir untuk masjid dan untuk masyarakat sekitar masjid jami ittihaadul ikhwan, dan kami memiliki visi dan misi diantaranya :</p>
+        <h2>Remaja Islam Masjid Jami Ittihaadul Ikhwan </h2>
+        <p>Kami para pemuda hadir untuk masjid dan untuk masyarakat sekitar masjid jami ittihaadul ikhwan, dan kami memiliki visi dan misi diantaranya :</p>
         
        </p> Visi</p> 
     </p>1. Mewujudkan generasi remaja masjid yang berakhlak mulia, berilmu, aktif dan berkontribusi dalam membangun peradaban Islam di lingkungan masyarakat</p>
