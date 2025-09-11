@@ -8,26 +8,35 @@
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-inner container">
       <div class="logo">
         <img src="logoo.png" alt="RISMI"/>
         <span class="brand">RISMI</span>
       </div>
-      <div class="tabs">
-        <button class="tab" data-route="Beranda" onclick="setRoute('Beranda')">Beranda</button>
-        <button class="tab" data-route="Susunan anggota" onclick="setRoute('Susunan anggota')">Susunan anggota</button>
-        <button class="tab" data-route="Kegiatan yang sedang berjalan" onclick="setRoute('Kegiatan yang sedang berjalan')">Kegiatan yang sedang berjalan</button>
-        <button class="tab" data-route="Kegiatan akan datang" onclick="setRoute('Kegiatan akan datang')">Kegiatan akan datang</button>
-        <button class="tab" data-route="Berita" onclick="setRoute('Berita')">Berita</button>
+
+      <!-- 🔽 Dropdown Menu -->
+      <div class="dropdown">
+        <button class="dropbtn">Menu ▾</button>
+        <div class="dropdown-content">
+          <button class="tab" data-route="Beranda" onclick="setRoute('Beranda')">Beranda</button>
+          <button class="tab" data-route="Susunan anggota" onclick="setRoute('Susunan anggota')">Susunan anggota</button>
+          <button class="tab" data-route="Kegiatan yang sedang berjalan" onclick="setRoute('Kegiatan yang sedang berjalan')">Kegiatan yang sedang berjalan</button>
+          <button class="tab" data-route="Kegiatan akan datang" onclick="setRoute('Kegiatan akan datang')">Kegiatan akan datang</button>
+          <button class="tab" data-route="Berita" onclick="setRoute('Berita')">Berita</button>
+        </div>
       </div>
     </div>
   </nav>
 
+  <!-- Konten -->
   <main class="container" id="app"></main>
 
+  <!-- Toast -->
   <div class="toast" role="status" aria-live="polite"></div>
 
+  <!-- Footer -->
   <footer class="container footer">
     <div>© 2025-2030 RISMI.</div>
   </footer>
