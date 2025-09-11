@@ -19,8 +19,6 @@ html,body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial
 }
 
-a{color:inherit;text-decoration:none}
-
 .container{
   max-width:1200px;
   margin:0 auto;
@@ -37,81 +35,80 @@ a{color:inherit;text-decoration:none}
 }
 
 .nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* logo kiri, tabs kanan */
-  gap: 16px;
-  padding: 10px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:10px 16px;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.logo img {
-  height: 50px;
-}
-
+.logo {display:flex;align-items:center;gap:8px}
+.logo img {height:50px}
 .brand{font-weight:700;letter-spacing:.5px}
 
-/* 🔹 FIX bagian menu tabs supaya konsisten di HP & laptop */
-.tabs {
-  display: flex;
-  gap: 12px;
-  flex-wrap: nowrap;    /* jangan turun ke bawah */
-  overflow-x: auto;     /* kalau sempit bisa discroll horizontal */
-  padding-bottom: 6px;
-}
-.tabs::-webkit-scrollbar {
-  display: none;        /* sembunyikan scrollbar */
+/* ==============================
+   Dropdown Menu
+   ============================== */
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.tab{
-  padding:8px 12px;
-  border:1px solid var(--border);
-  border-radius:999px;
-  cursor:pointer;
-  font-size:14px;
-  white-space: nowrap;   /* teks tombol tidak pindah ke bawah */
+.dropbtn {
+  background: var(--accent-2);
+  color: #000;
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.tab.active{
-  background:var(--accent);
-  color:#06120a;
-  border-color:transparent
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  min-width: 240px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  z-index: 50;
+  padding: 6px 0;
 }
 
-.header{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+/* tombol di dalam dropdown */
+.dropdown-content .tab {
+  background: transparent;
+  border: none;
+  color: #ffffff;        /* teks putih */
+  text-align: left;
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* hover effect */
+.dropdown-content .tab:hover {
+  background: var(--accent-2);
+  color: #000000;
+}
+
+/* tab aktif */
+.dropdown-content .tab.active {
+  background: var(--accent);
+  color: #000;
+}
+
+/* tampilkan menu saat hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ============================== */
 .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:0 8px 30px rgba(0,0,0,.25)}
-.grid{display:grid;gap:16px}
-.grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-.stat{display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:12px;background:#0b132b;border:1px dashed var(--border)}
-.stat .label{color:var(--muted);font-size:12px}
-.stat .value{font-weight:700;font-size:20px}
-.kpi{display:flex;gap:14px;align-items:center}
-.kpi .dot{width:10px;height:10px;border-radius:50%}
-.kpi .name{font-size:13px;color:var(--muted)}
-.kpi .num{font-weight:700}
-.section-title{font-size:18px;margin:6px 0 12px}
-.controls{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
-.input, .select{background:#0b132b;color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px;outline:none}
 .table{width:100%;border-collapse:separate;border-spacing:0;margin-top:8px}
 .table th, .table td{padding:10px 12px;border-bottom:1px solid var(--border);font-size:14px;text-align:left}
 .table thead th{position:sticky;top:58px;background:var(--bg-soft);z-index:10}
-.badge{padding:4px 8px;border-radius:999px;font-size:12px;border:1px solid var(--border);color:var(--muted)}
-.value{font-weight:700}
 .footer{margin:40px 0 60px;color:var(--muted);font-size:13px;text-align:center}
-.button{background:var(--accent-2);color:#04131a;border:none;border-radius:10px;padding:10px 12px;cursor:pointer}
-.button.secondary{background:transparent;border:1px solid var(--border);color:var(--text)}
-.hidden{display:none}
-.toast{position:fixed;bottom:16px;right:16px;background:var(--card);border:1px solid var(--border);padding:10px 12px;border-radius:10px;opacity:0;transform:translateY(12px);transition:all .3s}
-.toast.show{opacity:1;transform:translateY(0)}
-hr{border:0;border-top:1px solid var(--border);margin:8px 0 16px}
-.small{font-size:12px;color:var(--muted)}
-.chips{display:flex;gap:6px;flex-wrap:wrap}
-.chip{border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:12px;cursor:pointer}
-.chip.active{background:#0b132b;border-color:#1f2a52}
-.tag{background:#122046;border:1px solid #233768;padding:4px 8px;border-radius:8px;font-size:12px;color:#b9d6ff}
