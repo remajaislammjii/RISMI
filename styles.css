@@ -77,11 +77,10 @@ html,body{
   padding: 6px 0;
 }
 
-/* tombol di dalam dropdown */
 .dropdown-content .tab {
   background: transparent;
   border: none;
-  color: #ffffff;        /* teks putih */
+  color: #ffffff;
   text-align: left;
   width: 100%;
   padding: 12px 16px;
@@ -89,26 +88,89 @@ html,body{
   cursor: pointer;
 }
 
-/* hover effect */
 .dropdown-content .tab:hover {
   background: var(--accent-2);
   color: #000000;
 }
 
-/* tab aktif */
 .dropdown-content .tab.active {
   background: var(--accent);
   color: #000;
 }
 
-/* tampilkan menu saat hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
 /* ============================== */
-.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:0 8px 30px rgba(0,0,0,.25)}
-.table{width:100%;border-collapse:separate;border-spacing:0;margin-top:8px}
-.table th, .table td{padding:10px 12px;border-bottom:1px solid var(--border);font-size:14px;text-align:left}
-.table thead th{position:sticky;top:58px;background:var(--bg-soft);z-index:10}
-.footer{margin:40px 0 60px;color:var(--muted);font-size:13px;text-align:center}
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:20px;
+  box-shadow:0 8px 30px rgba(0,0,0,.25);
+  margin-bottom:20px
+}
+
+.table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  margin-top:8px
+}
+.table th, .table td{
+  padding:12px;
+  border-bottom:1px solid var(--border);
+  font-size:15px;
+  text-align:left
+}
+.table thead th{
+  position:sticky;
+  top:58px;
+  background:var(--bg-soft);
+  z-index:10
+}
+
+.footer{
+  margin:40px 0 60px;
+  color:var(--muted);
+  font-size:13px;
+  text-align:center
+}
+
+/* ====== Styling Khusus Halaman ====== */
+.beranda h1 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: var(--accent-2);
+}
+
+.beranda p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.beranda h2 {
+  font-size: 20px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+.beranda ul {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-left: 20px;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--accent-2);
+}
+
+.news-list li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
