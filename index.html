@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=1200">
-  <title>Remaja Islam – MJII</title>
-  <meta name="description" content="Website RISMI yang berisi tentang anggota, dan program kerja"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RISMI – Remaja Islam Masjid Jami Ittihaadul Ikhwan</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
+  <div class="navbar">
     <div class="nav-inner container">
       <div class="logo">
-        <img src="logoo.png" alt="RISMI"/>
+        <img src="logoo.png" alt="Logo"/>
         <span class="brand">RISMI</span>
       </div>
-
-      <!-- 🔽 Dropdown Menu -->
       <div class="dropdown">
-        <button class="dropbtn">Menu ▾</button>
+        <button class="dropbtn">Menu</button>
         <div class="dropdown-content">
-          <button class="tab" data-route="Beranda" onclick="setRoute('Beranda')">Beranda</button>
-          <button class="tab" data-route="Susunan anggota" onclick="setRoute('Susunan anggota')">Susunan anggota</button>
-          <button class="tab" data-route="Kegiatan yang sedang berjalan" onclick="setRoute('Kegiatan yang sedang berjalan')">Kegiatan yang sedang berjalan</button>
-          <button class="tab" data-route="Kegiatan akan datang" onclick="setRoute('Kegiatan akan datang')">Kegiatan akan datang</button>
-          <button class="tab" data-route="Berita" onclick="setRoute('Berita')">Berita</button>
+          <button class="tab" onclick="setRoute('Beranda')">Beranda</button>
+          <button class="tab" onclick="setRoute('Susunan anggota')">Susunan Anggota</button>
+          <button class="tab" onclick="setRoute('Kegiatan yang sedang berjalan')">Kegiatan Sedang Berjalan</button>
+          <button class="tab" onclick="setRoute('Kegiatan akan datang')">Kegiatan Akan Datang</button>
+          <button class="tab" onclick="setRoute('Berita')">Berita</button>
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 
-  <!-- Konten -->
-  <main class="container" id="app"></main>
+  <div class="container" id="app"></div>
 
-  <!-- Toast -->
-  <div class="toast" role="status" aria-live="polite"></div>
+  <div class="footer">© 2025 RISMI – Remaja Islam Masjid Jami Ittihaadul Ikhwan</div>
 
-  <!-- Footer -->
-  <footer class="container footer">
-    <div>© 2025-2030 RISMI.</div>
-  </footer>
-
-  <script src="app.js" defer></script>
+  <script src="app.js"></script>
 </body>
 </html>
