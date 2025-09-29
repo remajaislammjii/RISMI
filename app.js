@@ -21,11 +21,10 @@ const state = {
     { nama: "Adnin", jabatan: "Perlengkapan" }
   ],
   fixtures: [
-    { nama: "-", tanggal: "-" }
+    { nama: "Majelis anak muda", tanggal: "-", Lokasi: "Gang 20" }
   ],
   transfers: [
-    { nama: "Maulid & Sholat Shubuh Gabungan", tanggal: "28 September 2025" },
-    { nama: "Isra Mi'raj", tanggal: "-" }
+    { nama: "Isra Mi'raj", tanggal: "15 Januari 2026" }
   ],
   news: [
     { judul: "-" }
@@ -99,6 +98,7 @@ function render() {
             <tr>
               <th>Kegiatan</th>
               <th>Tanggal</th>
+              <th>Lokasi</th>
             </tr>
           </thead>
           <tbody>
