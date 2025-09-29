@@ -130,6 +130,7 @@ function render() {
               <tr>
                 <td>${a.nama}</td>
                 <td>${a.tanggal}</td>
+                <td>${a.Lokasi}</td>
               </tr>
             `).join("")}
           </tbody>
