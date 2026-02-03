@@ -24,10 +24,10 @@ const state = {
     { nama: "Majelis anak muda", tanggal: "-", Lokasi: "Gang 20" }
   ],
   transfers: [
-    { nama: "Isra Mi'raj", tanggal: "15 Januari 2026" }
+    { nama: "Ramadhan Vibes", tanggal: "Bulan Ramadhan" }
   ],
   news: [
-    { judul: "-" }
+    { judul: "Rismi mau mengadakan lomba untuk bulan Ramadhan, kira kira lomba apa ya yang cocok?" }
   ]
 };
 
