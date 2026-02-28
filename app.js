@@ -1,294 +1,143 @@
-// State aplikasi
 const state = {
+
   route: "Beranda",
 
   anggota: [
     { nama: "Nizar", jabatan: "Ketua" },
     { nama: "Abdurrohman", jabatan: "Wakil Ketua" },
     { nama: "Turfa", jabatan: "Bendahara 1" },
-    { nama: "Habibie", jabatan: "Bendahara 2" },
-    { nama: "Ara", jabatan: "Sekretaris 1" },
-    { nama: "Lita", jabatan: "Sekretaris 2" },
-    { nama: "Rehan", jabatan: "Humas 1" },
-    { nama: "Sobri", jabatan: "Humas 2" },
-    { nama: "Ferdi", jabatan: "Bidang olahraga 1" },
-    { nama: "Fahri", jabatan: "Bidang olahraga 2 + Teknisi" },
-    { nama: "Hasbi", jabatan: "Media 1" },
-    { nama: "Alif", jabatan: "Media 2" },
-    { nama: "Aulia", jabatan: "Media 3" },
-    { nama: "Saqib", jabatan: "Pendidikan dan dakwah + Teknisi" },
-    { nama: "Esta", jabatan: "Perlengkapan" },
-    { nama: "Laila", jabatan: "Perlengkapan" },
-    { nama: "Adnin", jabatan: "Perlengkapan" }
+    { nama: "Habibie", jabatan: "Bendahara 2" }
   ],
 
-  fixtures: [
-    { nama: "Majelis anak muda", tanggal: "-", lokasi: "Gang 20" }
-  ],
-
-  transfers: [
-    { nama: "Menara 2026", tanggal: "14 & 15 Maret 2026" }
-  ],
-
-  news: [
+  berita: [
     {
-      judul: `
-Kalian ingin membuat puasa kalian jadi makin seru? yuk daftar MENARA 2026!!!
+      judul: `PENDAFTARAN ANGGOTA BARU RISMI
 
-Akan ada banyak keseruan di acara ini, dan banyak sekali pembelajaran yang akan di dapat pada acara ini.
-
-Acara ini akan diadakan Pada Tanggal 14 & 15 Maret 2026
-
-Link Pendaftaran:
-<br><br>
-
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSemz5kYoyXBrMw2u-G5mScU0dzNBxmJtupdLTmOJjw6gaw4PA/viewform" target="_blank">
-👉 Klik disini untuk daftar
-</a>
-`
+Silahkan daftar melalui link berikut:
+https://docs.google.com/forms/`
     }
   ]
+
 };
 
+const params = new URLSearchParams(window.location.search);
+const page = params.get("page");
 
-// Ganti halaman
-function setRoute(route) {
+if(page){
+  state.route = page;
+}
+
+function setRoute(route){
+
   state.route = route;
+
+  history.pushState(null,"","?page=" + route);
+
   render();
 }
 
-
-// Render halaman
-function render() {
+function render(){
 
   const app = document.getElementById("app");
 
-  if (state.route === "Beranda") {
+
+  // ===== BERANDA =====
+
+  if(state.route === "Beranda"){
 
     app.innerHTML = `
-      <div class="card beranda">
 
-        <h1>Remaja Islam Masjid Jami Ittihaadul Ikhwan</h1>
+    <h2>Selamat Datang di RISMI</h2>
 
-        <p>
-        RISMI adalah wadah untuk remaja Islam di Masjid Jami Ittihaadul Ikhwan.
-        </p>
+    <p>
+    Website resmi Remaja Islam Masjid Jami' Istiqlal
+    </p>
 
-        <h2>Visi</h2>
-
-        <ul>
-
-          <li>Mewujudkan generasi remaja masjid yang berakhlak mulia</li>
-
-          <li>Membangun kesadaran beragama melalui huruf dasar hijaiyah</li>
-
-          <li>Membangun generasi muda yang unggul melalui ajaran agama</li>
-
-          <li>Menjadi wadah pembinaan remaja masjid</li>
-
-        </ul>
-
-
-        <h2>Misi</h2>
-
-        <ul>
-
-          <li>Mendorong pengembangan potensi diri remaja</li>
-
-          <li>Meningkatkan keimanan dan ketaqwaan remaja</li>
-
-          <li>Menyediakan wadah belajar ilmu agama</li>
-
-          <li>Menyediakan wadah meningkatkan keahlian</li>
-
-          <li>Mengikutsertakan masyarakat sekitar</li>
-
-        </ul>
-
-      </div>
     `;
+
   }
 
-
-  else if (state.route === "Susunan anggota") {
+  if(state.route === "Sejarah"){
 
     app.innerHTML = `
 
-      <div class="card">
+    <h2>Sejarah RISMI</h2>
 
-        <h2>Susunan Anggota</h2>
+    <p>
 
-        <table class="table">
+    RISMI adalah organisasi remaja masjid yang bergerak
+    dalam bidang dakwah dan kegiatan sosial.
 
-          <thead>
-
-            <tr>
-
-              <th>Nama</th>
-
-              <th>Jabatan</th>
-
-            </tr>
-
-          </thead>
-
-          <tbody>
-
-            ${state.anggota.map(a => `
-
-              <tr>
-
-                <td>${a.nama}</td>
-
-                <td>${a.jabatan}</td>
-
-              </tr>
-
-            `).join("")}
-
-          </tbody>
-
-        </table>
-
-      </div>
+    </p>
 
     `;
+
   }
 
-
-  else if (state.route === "Kegiatan yang sedang berjalan") {
+  if(state.route === "Alamat"){
 
     app.innerHTML = `
 
-      <div class="card">
+    <h2>Alamat</h2>
 
-        <h2>Kegiatan yang Sedang Berjalan</h2>
+    <p>
 
-        <table class="table">
+    Masjid Jami' Istiqlal
 
-          <thead>
-
-            <tr>
-
-              <th>Kegiatan</th>
-
-              <th>Tanggal</th>
-
-              <th>Lokasi</th>
-
-            </tr>
-
-          </thead>
-
-          <tbody>
-
-            ${state.fixtures.map(a => `
-
-              <tr>
-
-                <td>${a.nama}</td>
-
-                <td>${a.tanggal}</td>
-
-                <td>${a.lokasi}</td>
-
-              </tr>
-
-            `).join("")}
-
-          </tbody>
-
-        </table>
-
-      </div>
+    </p>
 
     `;
+
   }
 
-
-  else if (state.route === "Kegiatan akan datang") {
+  if(state.route === "Anggota"){
 
     app.innerHTML = `
 
-      <div class="card">
+    <h2>Daftar Anggota</h2>
 
-        <h2>Kegiatan Akan Datang</h2>
+    <ul>
 
-        <table class="table">
+    ${
+      state.anggota.map(a=>`
 
-          <thead>
+      <li>
+      ${a.nama} - ${a.jabatan}
+      </li>
 
-            <tr>
+      `).join("")
+    }
 
-              <th>Kegiatan</th>
-
-              <th>Tanggal</th>
-
-            </tr>
-
-          </thead>
-
-          <tbody>
-
-            ${state.transfers.map(a => `
-
-              <tr>
-
-                <td>${a.nama}</td>
-
-                <td>${a.tanggal}</td>
-
-              </tr>
-
-            `).join("")}
-
-          </tbody>
-
-        </table>
-
-      </div>
+    </ul>
 
     `;
+
   }
 
-
-  else if (state.route === "Berita") {
+  if(state.route === "Berita"){
 
     app.innerHTML = `
 
-      <div class="card">
+    <h2>Berita RISMI</h2>
 
-        <h2>Berita Terbaru</h2>
+    <ul>
 
-        <ul class="news-list">
+    ${
+      state.berita.map(n=>`
 
-          ${state.news.map(n => `
+      <li style="white-space: pre-line;">
+      ${n.judul}
+      </li>
 
-            <li style="white-space: pre-line;">
-              ${n.judul}
-            </li>
+      `).join("")
+    }
 
-          `).join("")}
-
-        </ul>
-
-      </div>
+    </ul>
 
     `;
+
   }
 
 }
 
-
-// Load awal
-window.onload = () => {
-
-  const params = new URLSearchParams(window.location.search);
-  const page = params.get("page");
-
-  if(page){
-    state.route = page;
-  }
-
-  render();
-};
+render();
