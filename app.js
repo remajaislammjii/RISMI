@@ -292,5 +292,3 @@ window.onload = () => {
 
   render();
 };
-
-apakah bagian ini sudah benar? 
