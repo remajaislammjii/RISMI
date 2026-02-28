@@ -9,7 +9,7 @@ const state = {
     { nama: "Habibie", jabatan: "Bendahara 2" },
     { nama: "Ara", jabatan: "Sekretaris 1" },
     { nama: "Lita", jabatan: "Sekretaris 2" },
-    { nama: "Rehan", jabatan: "Humas 1" },
+    { nama: "Raihan", jabatan: "Humas 1" },
     { nama: "Sobri", jabatan: "Humas 2" },
     { nama: "Ferdi", jabatan: "Bidang olahraga 1" },
     { nama: "Fahri", jabatan: "Bidang olahraga 2 + Teknisi" },
