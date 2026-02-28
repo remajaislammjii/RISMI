@@ -26,14 +26,19 @@ const state = {
   transfers: [
     { nama: "Menara 2026", tanggal: "14 & 15 Maret 2026" }
   ],
-  news: [
+ news: [
   { judul: `Kalian ingin membuat puasa kalian jadi makin seru? yuk daftar MENARA 2026!!!
-Akan ada banyak keseruan di acara ini, dan banyak sekali pembelajaran yang akan di dapat pada acara ini
-Acara ini akan diadakan Pada Tanggal 14 & 15 Maret 2026 
 
-Link Pendaftaran
-https://docs.google.com/forms/d/e/1FAIpQLSemz5kYoyXBrMw2u-G5mScU0dzNBxmJtupdLTmOJjw6gaw4PA/viewform` }
-  ]
+Akan ada banyak keseruan di acara ini, dan banyak sekali pembelajaran yang akan di dapat pada acara ini.
+
+Acara ini akan diadakan Pada Tanggal 14 & 15 Maret 2026
+
+Link Pendaftaran:
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSemz5kYoyXBrMw2u-G5mScU0dzNBxmJtupdLTmOJjw6gaw4PA/viewform" target="_blank">
+Klik disini untuk daftar
+</a>`
+  }
+]
 };
 
 function setRoute(route) {
