@@ -1,4 +1,6 @@
-// State aplikasi
+// =====================
+// STATE APLIKASI
+// =====================
 const state = {
   route: "Beranda",
 
@@ -9,7 +11,7 @@ const state = {
     { nama: "Habibie", jabatan: "Bendahara 2" },
     { nama: "Ara", jabatan: "Sekretaris 1" },
     { nama: "Lita", jabatan: "Sekretaris 2" },
-    { nama: "Raihan", jabatan: "Humas 1" },
+    { nama: "Rehan", jabatan: "Humas 1" },
     { nama: "Sobri", jabatan: "Humas 2" },
     { nama: "Ferdi", jabatan: "Bidang olahraga 1" },
     { nama: "Fahri", jabatan: "Bidang olahraga 2 + Teknisi" },
@@ -50,245 +52,161 @@ Link Pendaftaran:
   ]
 };
 
+// =====================
+// ROUTING (HASH SYSTEM)
+// =====================
 
-// Ganti halaman
 function setRoute(route) {
-  state.route = route;
+  window.location.hash = encodeURIComponent(route);
+}
+
+function handleRoute() {
+  const page = decodeURIComponent(window.location.hash.substring(1));
+
+  const validRoutes = [
+    "Beranda",
+    "Susunan anggota",
+    "Kegiatan yang sedang berjalan",
+    "Kegiatan akan datang",
+    "Berita"
+  ];
+
+  if (validRoutes.includes(page)) {
+    state.route = page;
+  } else {
+    state.route = "Beranda";
+  }
+
   render();
 }
 
+window.addEventListener("load", handleRoute);
+window.addEventListener("hashchange", handleRoute);
 
-// Render halaman
+// =====================
+// RENDER HALAMAN
+// =====================
+
 function render() {
-
   const app = document.getElementById("app");
 
+  // BERANDA
   if (state.route === "Beranda") {
-
     app.innerHTML = `
       <div class="card beranda">
-
         <h1>Remaja Islam Masjid Jami Ittihaadul Ikhwan</h1>
-
-        <p>
-        RISMI adalah wadah untuk remaja Islam di Masjid Jami Ittihaadul Ikhwan.
-        </p>
+        <p>RISMI adalah wadah untuk remaja Islam di Masjid Jami Ittihaadul Ikhwan.</p>
 
         <h2>Visi</h2>
-
         <ul>
-
           <li>Mewujudkan generasi remaja masjid yang berakhlak mulia</li>
-
           <li>Membangun kesadaran beragama melalui huruf dasar hijaiyah</li>
-
           <li>Membangun generasi muda yang unggul melalui ajaran agama</li>
-
           <li>Menjadi wadah pembinaan remaja masjid</li>
-
         </ul>
-
 
         <h2>Misi</h2>
-
         <ul>
-
           <li>Mendorong pengembangan potensi diri remaja</li>
-
           <li>Meningkatkan keimanan dan ketaqwaan remaja</li>
-
           <li>Menyediakan wadah belajar ilmu agama</li>
-
           <li>Menyediakan wadah meningkatkan keahlian</li>
-
           <li>Mengikutsertakan masyarakat sekitar</li>
-
         </ul>
-
       </div>
     `;
   }
 
-
+  // SUSUNAN ANGGOTA
   else if (state.route === "Susunan anggota") {
-
     app.innerHTML = `
-
       <div class="card">
-
         <h2>Susunan Anggota</h2>
-
         <table class="table">
-
           <thead>
-
             <tr>
-
               <th>Nama</th>
-
               <th>Jabatan</th>
-
             </tr>
-
           </thead>
-
           <tbody>
-
             ${state.anggota.map(a => `
-
               <tr>
-
                 <td>${a.nama}</td>
-
                 <td>${a.jabatan}</td>
-
               </tr>
-
             `).join("")}
-
           </tbody>
-
         </table>
-
       </div>
-
     `;
   }
 
-
+  // KEGIATAN BERJALAN
   else if (state.route === "Kegiatan yang sedang berjalan") {
-
     app.innerHTML = `
-
       <div class="card">
-
         <h2>Kegiatan yang Sedang Berjalan</h2>
-
         <table class="table">
-
           <thead>
-
             <tr>
-
               <th>Kegiatan</th>
-
               <th>Tanggal</th>
-
               <th>Lokasi</th>
-
             </tr>
-
           </thead>
-
           <tbody>
-
             ${state.fixtures.map(a => `
-
               <tr>
-
                 <td>${a.nama}</td>
-
                 <td>${a.tanggal}</td>
-
                 <td>${a.lokasi}</td>
-
               </tr>
-
             `).join("")}
-
           </tbody>
-
         </table>
-
       </div>
-
     `;
   }
 
-
+  // KEGIATAN AKAN DATANG
   else if (state.route === "Kegiatan akan datang") {
-
     app.innerHTML = `
-
       <div class="card">
-
         <h2>Kegiatan Akan Datang</h2>
-
         <table class="table">
-
           <thead>
-
             <tr>
-
               <th>Kegiatan</th>
-
               <th>Tanggal</th>
-
             </tr>
-
           </thead>
-
           <tbody>
-
             ${state.transfers.map(a => `
-
               <tr>
-
                 <td>${a.nama}</td>
-
                 <td>${a.tanggal}</td>
-
               </tr>
-
             `).join("")}
-
           </tbody>
-
         </table>
-
       </div>
-
     `;
   }
 
-
+  // BERITA
   else if (state.route === "Berita") {
-
     app.innerHTML = `
-
       <div class="card">
-
         <h2>Berita Terbaru</h2>
-
         <ul class="news-list">
-
           ${state.news.map(n => `
-
             <li style="white-space: pre-line;">
               ${n.judul}
             </li>
-
           `).join("")}
-
         </ul>
-
       </div>
-
     `;
   }
-
 }
-
-
-// Load awal
-window.onload = () => {
-
-  const params = new URLSearchParams(window.location.search);
-  const page = params.get("page");
-
-  if(page){
-    state.route = page;
-  }
-
-  render();
-};
