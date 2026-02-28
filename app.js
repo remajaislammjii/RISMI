@@ -282,5 +282,13 @@ function render() {
 
 // Load awal
 window.onload = () => {
+
+  const params = new URLSearchParams(window.location.search);
+  const page = params.get("page");
+
+  if(page){
+    state.route = page;
+  }
+
   render();
 };
