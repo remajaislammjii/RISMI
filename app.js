@@ -24,10 +24,15 @@ const state = {
     { nama: "Majelis anak muda", tanggal: "-", Lokasi: "Gang 20" }
   ],
   transfers: [
-    { nama: "Ramadhan Vibes", tanggal: "Bulan Ramadhan" }
+    { nama: "Menara 2026", tanggal: "14 & 15 Maret 2026" }
   ],
   news: [
-    { judul: "Rismi mau mengadakan lomba untuk bulan Ramadhan, kira kira lomba apa ya yang cocok?" }
+  { judul: `Kalian ingin membuat puasa kalian jadi makin seru? yuk daftar MENARA 2026!!!
+Akan ada banyak keseruan di acara ini, dan banyak sekali pembelajaran yang akan di dapat pada acara ini
+Acara ini akan diadakan Pada Tanggal 14 & 15 Maret 2026 
+
+Link Pendaftaran
+https://docs.google.com/forms/d/e/1FAIpQLSemz5kYoyXBrMw2u-G5mScU0dzNBxmJtupdLTmOJjw6gaw4PA/viewform` }
   ]
 };
 
